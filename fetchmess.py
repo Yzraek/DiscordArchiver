@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+
 def jsontohtml(ifile):
     for filename in os.listdir(ifile):
         if not filename.endswith(".json"):
@@ -143,7 +144,7 @@ def main():
         jsontohtml(args.input)
     else:
         ipath = input("Directory path: ")
-        print('ttttttttt')
+        ipath = ipath.replace(os.path.sep, "/")
         jsontohtml(ipath)
     
 if __name__ == '__main__':
