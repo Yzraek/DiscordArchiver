@@ -88,7 +88,7 @@ def jsontohtml(ifile):
             
             
             
-            with open(filename, "r", encoding="utf-8") as files:
+            with open(os.path.join(ifile,filename), "r", encoding="utf-8") as files:
                 data = json.load(files)
 
             messages = data.get("messages", [])
