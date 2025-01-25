@@ -128,8 +128,8 @@ def jsontohtml(ifile):
             </body>
             </html>
             """
-
-            with open(filename+".html", "w", encoding="utf-8") as file:
+            os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "output"), exist_ok=True)
+            with open(os.path.join("output", filename+".html"), "w", encoding="utf-8") as file:
                 file.write(html_content)
 
             print("Done")
