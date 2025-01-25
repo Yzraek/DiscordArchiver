@@ -143,6 +143,7 @@ def main():
         jsontohtml(args.input)
     else:
         ipath = input("Directory path: ")
+        print('ttttttttt')
         jsontohtml(ipath)
     
 if __name__ == '__main__':
